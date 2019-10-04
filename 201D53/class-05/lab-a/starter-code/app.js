@@ -9,11 +9,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+    var addsum = a + b;
+    var sumresult = ('The sum of ' + a + ' and ' + b + ' is ' + addsum + '.');
+    return[addsum, sumresult];
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -27,11 +30,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    var multiPly = a * b;
+    var multresult = ('The product of ' + a + ' and ' + b + ' is ' + multiPly + '.');
+    return[multiPly, multresult];
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -48,12 +54,22 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var sums =  sum(4,7);
+    sums = parseInt(sums);
+    var sumsTwo = sum(sums, 5);
+    sumsTwo = parseInt(sumsTwo);
+    var mults = multiply(4, 7);
+    mults = parseInt(mults);
+    var multstwo = multiply(mults, 5);
+    multstwo = parseInt(multstwo);
+    var sumresult = (a + ' and ' + b + ' and ' + c + ' sum to ' + sumsTwo + '.');
+    var multsresult = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multstwo + '.');
+    return[sumsTwo, multstwo, sumresult, multsresult];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
-
+testSumAndMultiply(4,7,5);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -70,12 +86,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var sumthree = sum(testArray[0], testArray[1]);
+    sumthree = parseInt(sumthree);
+    var sumfour = sum(sumthree, testArray[2])
+    sumfour = parseInt(sumfour);
+    var finalresult = (testArray[0] + ','+ testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sumfour + ' is their sum.');
+    return[sumfour, finalresult];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,11 +112,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+    var multthree = multiply(testArray[0], testArray[1]);
+    multthree = parseInt(multthree);
+    var multfour = multiply(multthree, testArray[2])
+    multfour = parseInt(multfour);
+    var finalresulttwo = ('The numbers ' + testArray[0] + ','+ testArray[1] + ',' + testArray[2] + ' have a product of ' + multfour + '.');
+    return[multfour, finalresulttwo];
+
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
