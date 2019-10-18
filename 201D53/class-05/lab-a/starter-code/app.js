@@ -54,13 +54,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var sums =  sum(4,7);
+    var sums =  sum(a,b);
     sums = parseInt(sums);
-    var sumsTwo = sum(sums, 5);
+    var sumsTwo = sum(sums, c);
     sumsTwo = parseInt(sumsTwo);
-    var mults = multiply(4, 7);
+    var mults = multiply(a, b);
     mults = parseInt(mults);
-    var multstwo = multiply(mults, 5);
+    var multstwo = multiply(mults, c);
     multstwo = parseInt(multstwo);
     var sumresult = (a + ' and ' + b + ' and ' + c + ' sum to ' + sumsTwo + '.');
     var multsresult = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multstwo + '.');
@@ -148,9 +148,19 @@ var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+while (testDynamicArray => 0) {
+    var dynamiccalculate = multiply(testDynamicArray);
+    dynamiccalculate = parseInt(dynamiccalculate);
+    var secondresult = dynamiccalculate;
+    secondresult = parseInt(secondresult);
+    var finalresult = ('The numbers ' + testDynamicArray +  ' have a product of ' + secondresult + '.');
+    return[secondresult, finalresult];
+}
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
+multiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
